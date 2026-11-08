@@ -1,0 +1,1 @@
+<main id="main" class="page error-page"><span class="error-code">404</span><?= icon('scan') ?><h1><?= e($title ?? 'Sinal não encontrado.') ?></h1><p><?= e($errorMessage ?? 'Esse Pokémon ou endereço não está no nosso radar. Vamos voltar ao laboratório?') ?></p><a class="button button-dark" href="<?= e(route()) ?>">Voltar ao PokéLab <?= icon('arrow') ?></a></main>

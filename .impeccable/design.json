@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T17:20:07.370594+00:00",
+  "title": "Design System: PokéLab",
+  "extensions": {
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Resposta dos controles e captura."
+      },
+      {
+        "name": "capture",
+        "value": "550ms",
+        "purpose": "Seleção de um integrante."
+      },
+      {
+        "name": "scan",
+        "value": "800ms",
+        "purpose": "Varredura da equipe."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "catalog-tablet",
+        "value": "800px"
+      },
+      {
+        "name": "tablet",
+        "value": "1000px"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "hero-art",
+        "value": "0 15px 12px #7d192344",
+        "purpose": "Drop shadow das ilustrações da apresentação."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal escura.",
+      "html": "<button class=\"ds-button\">Explorar Pokémon</button>",
+      "css": ".ds-button{font:600 14px Outfit,sans-serif;border:0;border-radius:10px;padding:13px 21px;cursor:pointer;display:inline-flex;gap:12px;align-items:center;background:var(--ink,#202f3d);color:white;transition:transform .25s,background .2s}.ds-button:hover{transform:translateY(-2px);background:#334d61}.ds-button:focus-visible{outline:3px solid #157b95;outline-offset:5px}.ds-button:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Analysis button",
+      "kind": "button",
+      "refersTo": "button-analysis",
+      "description": "Ação de análise no console.",
+      "html": "<button class=\"ds-button ds-yellow\">Analisar equipe</button>",
+      "css": ".ds-button{font:600 14px Outfit,sans-serif;border:0;border-radius:10px;padding:13px 21px;cursor:pointer;display:inline-flex;gap:12px;align-items:center;background:var(--ink,#202f3d);color:white;transition:transform .25s,background .2s}.ds-button:hover{transform:translateY(-2px);background:#334d61}.ds-button:focus-visible{outline:3px solid #157b95;outline-offset:5px}.ds-button:disabled{opacity:.5;cursor:not-allowed}.ds-yellow{background:var(--yellow,#ffdc63);color:var(--ink,#202f3d)}.ds-yellow:hover{background:#ffe78f}"
+    },
+    {
+      "name": "Search",
+      "kind": "input",
+      "description": "Busca do catálogo.",
+      "html": "<input class=\"ds-search\" type=\"search\" aria-label=\"Pesquisar Pokémon\" placeholder=\"Qual Pokémon você procura?\">",
+      "css": ".ds-search{font:13px Outfit,sans-serif;padding:14px 15px;border:1px solid #dde4e9;border-radius:10px;color:#202f3d;background:white;caret-color:#e94351}.ds-search:focus-visible{outline:2px solid #1b95ac;outline-offset:2px}"
+    },
+    {
+      "name": "Role chip",
+      "kind": "chip",
+      "description": "Função sempre escrita.",
+      "html": "<span class=\"ds-chip\">Versátil</span>",
+      "css": ".ds-chip{font:600 10px Outfit,sans-serif;background:#f0eaf8;color:#785091;padding:5px 8px;border-radius:5px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Estado ativo com texto e sublinhado.",
+      "html": "<nav class=\"ds-nav\"><a aria-current=\"page\" href=\"#\">Pokédex</a><a href=\"#\">Minha equipe</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;font:500 14px Outfit,sans-serif}.ds-nav a{color:#627382;padding:14px 0;text-decoration:none}.ds-nav a[aria-current]{color:#b82c3a;border-bottom:3px solid #e94351}.ds-nav a:hover{color:#b82c3a}.ds-nav a:focus-visible{outline:3px solid #157b95;outline-offset:5px}"
+    },
+    {
+      "name": "Pokemon card",
+      "kind": "card",
+      "description": "Plano de arte tonal com identificação abaixo.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-art\">Ilustração do catálogo</div><strong>Charizard</strong><span>Corpo a corpo</span></article>",
+      "css": ".ds-card{font-family:Outfit,sans-serif;border:1px solid #dde4e9;border-radius:14px;background:white;overflow:hidden;width:240px;transition:transform .25s}.ds-card:hover{transform:translateY(-4px)}.ds-art{height:192px;background:#f0eaf8;display:grid;place-items:center;color:#785091;font-size:12px}.ds-card strong{display:block;color:#202f3d;font-size:16px;padding:14px 14px 0}.ds-card span{display:block;font-size:10px;color:#627382;padding:4px 14px 16px}"
+    },
+    {
+      "name": "Element tile",
+      "kind": "card",
+      "description": "Entrada do catálogo por elementos; usa um dos 18 pares type-bg/type-ink existentes, com nome e contagem visíveis.",
+      "html": "<a class=\"ds-element-tile\" href=\"#fire\"><h3>Fogo</h3><span>Explorar Pokémon deste elemento</span></a>",
+      "css": ".ds-element-tile{--type-bg:#fcebe5;--type-ink:#a53e23;display:flex;flex-direction:column;justify-content:center;min-height:152px;box-sizing:border-box;padding:22px;border-radius:14px;background:var(--type-bg);color:var(--type-ink);font-family:Outfit,sans-serif;text-decoration:none;transition:transform .25s cubic-bezier(.16,1,.3,1)}.ds-element-tile h3{margin:0;font-size:24px;font-weight:600}.ds-element-tile span{font-size:11px;margin-top:8px}.ds-element-tile:hover{transform:translateY(-4px)}.ds-element-tile:focus-visible{outline:3px solid #157b95;outline-offset:5px}html.motion-off .ds-element-tile{transition:none}@media(prefers-reduced-motion:reduce){.ds-element-tile{transition:none}}"
+    },
+    {
+      "name": "Motion toggle",
+      "kind": "button",
+      "description": "Controle do cabeçalho com aria-pressed; a aplicação persiste a preferência e aplica html.motion-off quando desativado.",
+      "html": "<button class=\"ds-motion-toggle\" type=\"button\" aria-pressed=\"true\"><span>Animações</span><span class=\"ds-toggle-track\" aria-hidden=\"true\"></span></button>",
+      "css": ".ds-motion-toggle{display:inline-flex;align-items:center;gap:7px;border:0;background:none;color:#627382;font:11px Outfit,sans-serif;padding:8px 0;cursor:pointer}.ds-toggle-track{display:block;width:25px;height:14px;background:#a7b6c0;border-radius:9px;position:relative}.ds-toggle-track:after{content:\"\";position:absolute;top:3px;left:3px;width:8px;height:8px;border-radius:50%;background:white;transition:transform .2s}.ds-motion-toggle[aria-pressed=true] .ds-toggle-track{background:#287b65}.ds-motion-toggle[aria-pressed=true] .ds-toggle-track:after{transform:translateX(11px)}.ds-motion-toggle:focus-visible{outline:3px solid #157b95;outline-offset:5px}html.motion-off .ds-toggle-track:after{transition:none}@media(prefers-reduced-motion:reduce){.ds-toggle-track:after{transition:none}}"
+    },
+    {
+      "name": "Auth input",
+      "kind": "input",
+      "description": "Campo de login com rótulo visível, preenchimento branco e foco azul.",
+      "html": "<div class=\"ds-auth-field\"><label for=\"ds-email\">E-mail</label><input id=\"ds-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"voce@exemplo.com\" required></div>",
+      "css": ".ds-auth-field{display:flex;flex-direction:column;gap:8px;font-family:Outfit,sans-serif;color:#202f3d}.ds-auth-field label{font-size:13px;font-weight:500}.ds-auth-field input{box-sizing:border-box;background:white;border:1px solid #dde4e9;border-radius:9px;padding:12px 14px;font:14px Outfit,sans-serif;width:100%;min-width:0;color:#202f3d}.ds-auth-field input::placeholder{color:#667985}.ds-auth-field input:focus-visible{outline:2px solid #1b95ac;outline-offset:2px}"
+    },
+    {
+      "name": "Avatar choice",
+      "kind": "input",
+      "description": "Galeria pesquisável de 54 Pokémon com radios nativos, estado selecionado e foco visível; a aplicação atualiza a prévia e aplica a escolha ao salvar o perfil.",
+      "html": "<fieldset class=\"ds-avatars\"><legend>Escolha seu avatar</legend><label class=\"ds-avatar\"><input type=\"radio\" name=\"ds-avatar\" value=\"pikachu\" checked><span>Pikachu <b aria-hidden=\"true\">✓</b></span></label><label class=\"ds-avatar\"><input type=\"radio\" name=\"ds-avatar\" value=\"bulbasaur\"><span>Bulbasaur <b aria-hidden=\"true\">✓</b></span></label><p>Selecione um avatar. Salve para aplicar.</p><button type=\"button\">Salvar perfil</button></fieldset>",
+      "css": ".ds-avatars{border:0;padding:4px;font-family:Outfit,sans-serif;color:#202f3d}.ds-avatars legend{font-weight:500;margin-bottom:12px}.ds-avatar{display:inline-block;position:relative;cursor:pointer;margin:4px}.ds-avatar input{position:absolute;width:1px;height:1px;opacity:0}.ds-avatar>span{display:flex;gap:8px;align-items:center;padding:16px;border:1px solid #dde4e9;border-radius:10px;background:white}.ds-avatar b{visibility:hidden}.ds-avatar input:checked+span{border-color:#287c91;background:#e7f1f5;outline:2px solid #287c91}.ds-avatar input:checked+span b{visibility:visible}.ds-avatar input:focus-visible+span{outline:3px solid #157b95;outline-offset:3px}.ds-avatars p{font-size:11px;color:#627382}.ds-avatars button{border:0;border-radius:10px;background:#202f3d;color:white;padding:13px 21px;font:600 14px Outfit,sans-serif;cursor:pointer}.ds-avatars button:focus-visible{outline:3px solid #157b95;outline-offset:3px}"
+    },
+    {
+      "name": "Profile disclosure",
+      "kind": "nav",
+      "description": "Menu de perfil em details/summary nativo; preserva teclado, foco visível, motion-off global e layout responsivo. Perfil e recuperação reutilizam campos brancos, rótulos visíveis, dicas e feedback de sucesso ou erro.",
+      "html": "<details class=\"ds-profile-menu\"><summary>Meu perfil <span aria-hidden=\"true\">⌄</span></summary><nav aria-label=\"Conta\"><a href=\"#profile\">Editar perfil</a><a href=\"#recovery\">Recuperar senha</a></nav></details>",
+      "css": ".ds-profile-menu{position:relative;display:inline-block;font:14px Outfit,sans-serif;color:#202f3d}.ds-profile-menu summary{display:flex;gap:12px;align-items:center;cursor:pointer;list-style:none;padding:10px;border-radius:10px}.ds-profile-menu summary::-webkit-details-marker{display:none}.ds-profile-menu summary:hover{background:#edf2f5}.ds-profile-menu summary span{transition:transform .2s}.ds-profile-menu[open] summary span{transform:rotate(180deg)}.ds-profile-menu nav{position:absolute;right:0;top:calc(100% + 7px);z-index:1;width:min(250px,80vw);box-sizing:border-box;border:1px solid #dde4e9;border-radius:12px;padding:10px;background:white}.ds-profile-menu a{display:block;padding:11px 10px;border-radius:7px;color:#202f3d;text-decoration:none}.ds-profile-menu a:hover{background:#edf2f5}.ds-profile-menu summary:focus-visible,.ds-profile-menu a:focus-visible{outline:3px solid #157b95;outline-offset:3px}html.motion-off .ds-profile-menu summary span{transition:none}@media(prefers-reduced-motion:reduce){.ds-profile-menu summary span{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Um laboratório para o seu próximo time",
+    "overview": "Identidade de Pokédex tecnológica escolhida pelo usuário: vermelho, painéis azuis, detalhes amarelos e animações. As ilustrações fornecidas são protagonistas. Superfícies claras tornam o catálogo legível e o console azul distingue a equipe em edição.",
+    "keyCharacteristics": [
+      "Vermelho na identidade e na apresentação.",
+      "Azul no console e amarelo nas ações de análise.",
+      "Imagens grandes, órbitas vetoriais e ícones SVG consistentes.",
+      "Captura ao selecionar e varredura ao analisar."
+    ],
+    "rules": [
+      {
+        "name": "The Readable Color Rule",
+        "body": "Cor comunica função, acompanhada de texto; textos pequenos conservam contraste mínimo de 4,5:1.",
+        "section": "colors"
+      },
+      {
+        "name": "The Motion With Meaning Rule",
+        "body": "Animar seleção, varredura e resposta dos controles. A preferência reduced motion desativa movimento e rolagem suave. Conteúdo permanece acessível sem aguardar animação.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do usar as ilustrações locais e nomes reais do catálogo.",
+      "Do manter função escrita junto da sua cor.",
+      "Do preservar foco visível, estados vazios e movimento reduzido."
+    ],
+    "donts": [
+      "Don’t usar as cores claras das ilustrações como cor de texto corrido.",
+      "Don’t esconder controles da equipe no celular.",
+      "Don’t transformar a análise educativa em promessa de vitória."
+    ]
+  }
+}

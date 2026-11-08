@@ -1,0 +1,6 @@
+
+# Local data and secrets
+.private/*
+!.private/.htaccess
+log/*.log
+.impeccable/review/*.png
